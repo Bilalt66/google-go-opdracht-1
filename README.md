@@ -1,13 +1,32 @@
 # google-go-opdracht-1
 
-STAP 1
-Het programma start met package main en importeert drie packages: fmt voor invoer en uitvoer, math/rand voor willekeurige getallen en time om de random generator te initialiseren.
+We maken een package main aan, dit zorgt ervoor dat het programma uitgevoerd kan worden.
 
-STAP 2
-In de main() functie wordt eerst de random generator ingesteld, daarna worden de waarden 1 en 100 opgeslagen als minimum en maximum. Met deze waarden wordt een willekeurig getal tussen 1 en 100 gegenereerd en opgeslagen in randomNum. Dit is het geheime getal. Vervolgens wordt er uitleg op het scherm geprint: welkom, het bereik van het getal en dat de speler 5 kansen heeft.
+Daarna importeren we fmt, math/rand en time.
+fmt gebruiken we voor printen en input,
+math/rand voor een willekeurig getal,
+time om de random generator goed te starten.
 
-STAP 3
-Daarna begint een for-loop die vijf keer loopt. In elke ronde wordt de functie askInput() aangeroepen om een getal van de gebruiker te lezen. De ingevoerde waarde wordt vergeleken met het geheime getal. Is het te laag, dan komt “HOGER!”. Is het te hoog, dan komt “LAGER!”. Is het goed, dan stopt het programma meteen. Na elke foutieve gok wordt berekend hoeveel kansen nog over zijn en dat wordt geprint. Als alle kansen op zijn, wordt het juiste nummer getoond.
+Dan maken we de functie main, hier begint het programma.
 
-STAP 4
-De functie askInput() print een vraag, leest de invoer van de gebruiker in een variabele en geeft die waarde terug aan de main() functie.
+In main starten we de random generator met de huidige tijd en daarna maken we twee variabelen: min is 1 en max is 100.
+
+Met rand.Intn maken we een willekeurig getal tussen 1 en 100 en slaan dat op in randomNum.
+
+Vervolgens printen we een welkom bericht en leggen we uit dat het getal tussen 1 en 100 zit.
+Daarna laten we de speler een moeilijkheid kiezen.
+
+We maken de variabele diff en lezen de keuze in met fmt.Scan, met een if controleren we of de keuze geldig is. Als dat niet zo is zetten we hem automatisch op Easy.
+
+Daarna maken we de variabelen chances en diffString. Met een switch passen we het aantal kansen aan. Bij Medium krijgt de speler 5 kansen, bij Hard 3 kansen.
+
+Dan printen we hoeveel kansen de speler heeft.
+
+Daarna begint een for loop. Deze loop draait zolang de speler nog kansen heeft.
+
+In elke ronde roepen we de functie askInpu aan. Die functie vraagt om een getal en geeft dat terug.
+
+We vergelijken de invoer met het random getal, is het te laag dan zeggen we dat het hoger moet. Is het te hoog dan zeggen we dat het lager moet. Is het goed, dan printen we dat het juist is en stoppen we het programma. Na elke gok berekenen we hoeveel kansen nog over zijn en printen we dat.
+
+Onder de main functie staat askInput.
+Deze functie vraagt om invoer, leest het getal in en geeft het terug aan de main functie.

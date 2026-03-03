@@ -45,7 +45,6 @@ func main() {
 	fmt.Printf("Great! You have selected the %s difficulty level.\n", diffString)
 	fmt.Printf("You have %d chances. Let's start the game!\n", chances)
 
-	// Gebruik nu 'chances' in de loop
 	for i := 0; i < chances; i++ {
 		input := askInput()
 
